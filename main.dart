@@ -2,13 +2,16 @@ import 'utils.dart';
 import 'dart:io';
 
 void main() {
-	gameStarter();
+  gameStarter();
 }
 
 void gameStarter() {
-  print("Please select game difficulty: "+ options.difficultyOptions.toString());
+  print(
+      "Please select game difficulty: " + options.difficultyOptions.toString());
   options.setDifficulty(stdin.readLineSync());
   utils.createHumans(options.difficulty);
   utils.createFamilies();
 }
+
+//main test
 
