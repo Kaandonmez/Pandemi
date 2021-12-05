@@ -103,15 +103,69 @@ class Utils {
     }*/
 
     /*for (int i = 0; i < 100000; i++) {
-    print(humans[i].toString());
-  }
-  print("\n");
-  print(humans.length.toString());
-  */
+      print(humans[i].toString());
+    }
+    print("\n");
+    print(humans.length.toString());
+    */
   }
 
   void createFamilies() {
-    var families = new Families("1", [humans[1], humans[2], humans[2]]);
-    print(families.toString());
+    int familyCounter = 0;
+    int chance;
+    //int prsn;
+    int yetiskinMin = 13900;
+    int yetiskinMax = 24699;
+    int cocukMin = 24700;
+    int cocukMax = 99999;
+    int yasliMin = 0;
+    int yasliMax = 13899;
+
+    var families = [];
+
+    while (familyCounter < 100) {
+      /**
+        * todo: test amaçlı aile oluşturmak 100 tane deneme amaçlı.
+        * ! ailelerin %35'i 3 kişilik olsun. (2x yetişkin + 1 çocuk)
+        * ! ailelerin %45'i 4 kişilik olsun (2x yetişkin + 2 çocuk)
+        * ! ailelerin %20'si 5 kişilik olsun (2x yetişkin + 2 çocuk + 1 yaşlı)
+        *todo: 26 yaşındaki birinin 25 yaşındaki çocuğu olabilir daha sonra düzenlenecek
+        */
+      chance = rnd.nextInt(100);
+      if (chance < 21) {
+        //? 5 kişilik aile oluşturma
+        families.add(Families(familyCounter.toString(), [
+          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
+          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
+          humans[yasliMin + rnd.nextInt(yasliMax - yasliMin)]
+        ]));
+      } else if (chance < 56) {
+        //? 3 kişilik aile oluşturma
+        families.add(Families(familyCounter.toString(), [
+          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
+          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
+        ]));
+      } else if (chance <= 10) {
+        //? 4 kişilik aile oluşturma
+        families.add(Families(familyCounter.toString(), [
+          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
+          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
+        ]));
+      }
+
+      familyCounter++;
+    }
+
+    //var families = new Families("1", [humans[1], humans[2], humans[3]]);
+    //print(families.toString());
+    for (int i = 0; i < 10; i++) {
+      print(families[i]);
+      print("\n");
+    }
   }
 }
