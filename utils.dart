@@ -129,7 +129,7 @@ class Utils {
         * ! ailelerin %35'i 3 kişilik olsun. (2x yetişkin + 1 çocuk)
         * ! ailelerin %45'i 4 kişilik olsun (2x yetişkin + 2 çocuk)
         * ! ailelerin %20'si 5 kişilik olsun (2x yetişkin + 2 çocuk + 1 yaşlı)
-        *todo: 26 yaşındaki birinin 25 yaşındaki çocuğu olabilir daha sonra düzenlenecek
+        * todo: 26 yaşındaki birinin 25 yaşındaki çocuğu olabilir daha sonra düzenlenecek
         */
       chance = rnd.nextInt(100);
       if (chance < 21) {
@@ -148,7 +148,7 @@ class Utils {
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
         ]));
-      } else if (chance <= 10) {
+      } else if (chance <= 100) {
         //? 4 kişilik aile oluşturma
         families.add(Families(familyCounter.toString(), [
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
@@ -164,7 +164,7 @@ class Utils {
     //var families = new Families("1", [humans[1], humans[2], humans[3]]);
     //print(families.toString());
     for (int i = 0; i < 10; i++) {
-      print(families[i]);
+      print(families[i].toString());
       print("\n");
     }
   }
