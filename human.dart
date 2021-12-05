@@ -1,3 +1,5 @@
+import 'hobbies.dart';
+
 class Human {
   String name = "";
   String surname = "";
@@ -24,5 +26,9 @@ class Human {
 
   void setFamilyId(String FamilyId) {
     familyId = FamilyId;
+  }
+
+  void setHobbie(List Hobbie) {
+    hobbies = Hobbie;
   }
 }

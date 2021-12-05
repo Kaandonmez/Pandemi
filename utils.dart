@@ -96,11 +96,9 @@ class Utils {
         humans.add(new Human("Young" + counter.toString(), counter.toString(),
             min + rnd.nextInt(max - min)));
       }
+
       counter++;
     }
-    /*for(int i = 0; i<100;i++){
-      print(humans[rnd.nextInt(100000)].toString());
-    }*/
 
     /*for (int i = 0; i < 100000; i++) {
       print(humans[i].toString());
@@ -108,12 +106,12 @@ class Utils {
     print("\n");
     print(humans.length.toString());
     */
+    createHobbies();
   }
 
   void createFamilies() {
     int familyCounter = 0;
     int chance;
-    //int prsn;
     int yetiskinMin = 13900;
     int yetiskinMax = 24699;
     int cocukMin = 24700;
@@ -123,7 +121,7 @@ class Utils {
 
     var families = [];
 
-    while (familyCounter < 100) {
+    while (familyCounter < 5) {
       /**
         * todo: test amaçlı aile oluşturmak 100 tane deneme amaçlı.
         * ! ailelerin %35'i 3 kişilik olsun. (2x yetişkin + 1 çocuk)
@@ -139,14 +137,16 @@ class Utils {
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[yasliMin + rnd.nextInt(yasliMax - yasliMin)]
+          humans[yasliMin + rnd.nextInt(yasliMax - yasliMin)],
+          humans[0]
         ]));
       } else if (chance < 56) {
         //? 3 kişilik aile oluşturma
         families.add(Families(familyCounter.toString(), [
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
+          humans[1]
         ]));
       } else if (chance <= 100) {
         //? 4 kişilik aile oluşturma
@@ -154,18 +154,36 @@ class Utils {
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
+          humans[2]
         ]));
       }
 
       familyCounter++;
     }
 
-    //var families = new Families("1", [humans[1], humans[2], humans[3]]);
-    //print(families.toString());
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
       print(families[i].toString());
       print("\n");
+    }
+  }
+
+  void createHobbies() {
+    var hobbies = [];
+    int hobbieCounter = 0;
+    hobbies.add(Hobbies("test", rnd.nextDouble()));
+    hobbies.add(Hobbies("test2", rnd.nextDouble()));
+    hobbies.add(Hobbies("test3", rnd.nextDouble()));
+    hobbies.add(Hobbies("test4", rnd.nextDouble()));
+    hobbies.add(Hobbies("test5", rnd.nextDouble()));
+    hobbies.add(Hobbies("test6", rnd.nextDouble()));
+    hobbies.add(Hobbies("test7", rnd.nextDouble()));
+    hobbies.add(Hobbies("test8", rnd.nextDouble()));
+    while (hobbieCounter < humans.length) {
+      //humans[0].setHobbie(hobbies);
+      humans[hobbieCounter].setHobbie([hobbies[rnd.nextInt(hobbies.length)]]);
+
+      hobbieCounter++;
     }
   }
 }
