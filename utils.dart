@@ -102,11 +102,12 @@ class Utils {
       print(humans[rnd.nextInt(100000)].toString());
     }*/
 
-    for (int i = 0; i < 100000; i++) {
-      print(humans[i].toString());
-    }
-    print("\n");
-    print(humans.length.toString());
+    /*for (int i = 0; i < 100000; i++) {
+    print(humans[i].toString());
+  }
+  print("\n");
+  print(humans.length.toString());
+  */
   }
 
   void createFamilies() {
