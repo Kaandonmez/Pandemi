@@ -11,6 +11,6 @@ class Hobbies {
 
   @override
   String toString() {
-    return name + " " + socialDistance.toString() + ".   ";
+    return name + " " + socialDistance.toString() + "...   ";
   }
 }

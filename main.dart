@@ -12,4 +12,5 @@ void gameStarter() {
   utils.createHumans(
       options.difficulty); //!create hobbie bunun içinde bulunuyor.
   utils.createFamilies();
+  utils.covidSpread();
 }

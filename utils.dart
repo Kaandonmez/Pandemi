@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'covid.dart';
 import 'human.dart';
 import 'families.dart';
 import 'hobbies.dart';
@@ -10,6 +11,14 @@ var humans = [];
 var families = [];
 var populationPyramide = [];
 var rnd = new Random();
+int familyCounter = 0;
+int chance = 0;
+int yetiskinMin = 13900;
+int yetiskinMax = 24699;
+int cocukMin = 24700;
+int cocukMax = 99999;
+int yasliMin = 0;
+int yasliMax = 13899;
 
 class Utils {
   var newZealandPopulationPyramide = [19.431, 64.201, 16.368];
@@ -106,21 +115,10 @@ class Utils {
     print("\n");
     print(humans.length.toString());
     */
-    createHobbies();
+    createHobbies(); //!   <---- hobiler burada oluşturuluyor.
   }
 
   void createFamilies() {
-    int familyCounter = 0;
-    int chance;
-    int yetiskinMin = 13900;
-    int yetiskinMax = 24699;
-    int cocukMin = 24700;
-    int cocukMax = 99999;
-    int yasliMin = 0;
-    int yasliMax = 13899;
-
-    var families = [];
-
     while (familyCounter < 5) {
       /**
         * todo: test amaçlı aile oluşturmak 100 tane deneme amaçlı.
@@ -185,5 +183,21 @@ class Utils {
 
       hobbieCounter++;
     }
+  }
+
+  void covidSpread() {
+    var covid = [];
+    // todo: min 1 kişi kesin hasta olacak human sınıfına boolean isCovid eklenebilir.
+    //!done
+    // todo: virüs 2 yolla yayılacak, family içinde, ortak hobiye sahip kişilerde.
+    // todo: herhangi bir aile bireyinin sahip olduğu X hobisi diğer aile üyeleri tarafından bensenmese de olur. (mu?)
+    // todo: yaş ilerledikçe bulaştırıcılığı az hobiler tanımlanabilir.
+    // todo: yaşlılar covid'den daha çok etkileniyor. (kronik rahatsızlıkları olanlar göz ardı edildi.)
+    covid.add(Covid(0.8));
+    covid[0].makeHumanCovid(humans[0]);
+    print("\n");
+    print(humans[0].isCovid.toString());
+    covid[0].makeFamilyCovid(0);
+    print(families[0].toString());
   }
 }

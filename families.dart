@@ -2,6 +2,7 @@ class Families {
   var id = "";
   var members = [];
   var hobbies = [];
+  bool? isCovid;
 
   Families(String Id, List Members) {
     id = Id;
