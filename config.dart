@@ -6,6 +6,7 @@ var utils = new Utils();
 var options = new Options();
 var humans = [];
 var families = [];
+var hobbies = [];
 var populationPyramide = [];
 var rnd = new Random();
 var covid = [];

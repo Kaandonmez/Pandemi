@@ -33,6 +33,6 @@ class Human {
   }
 
   void setHobbie(List Hobbie) {
-    hobbies = Hobbie;
+    hobbies.add(Hobbie);
   }
 }

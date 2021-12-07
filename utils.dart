@@ -58,6 +58,7 @@ class Utils {
     }
     int counter = 0;
     while (counter < 100000) {
+      //! toplam oluşturulacak insan sayısı buradan belirtiliyor.
       /**
         * !0-24 -> %42,2
         * !25-39 -> %24,7
@@ -106,6 +107,7 @@ class Utils {
 
   void createFamilies() {
     while (familyCounter < 5) {
+      //!  <----- kaç adet aile olşturulacağı burada belirleniyor.
       /**
         * todo: test amaçlı aile oluşturmak 100 tane deneme amaçlı.
         * ! ailelerin %35'i 3 kişilik olsun. (2x yetişkin + 1 çocuk)
@@ -153,7 +155,6 @@ class Utils {
   }
 
   void createHobbies() {
-    var hobbies = [];
     int hobbieCounter = 0;
     hobbies.add(Hobbies("test", rnd.nextDouble()));
     hobbies.add(Hobbies("test2", rnd.nextDouble()));
@@ -164,7 +165,6 @@ class Utils {
     hobbies.add(Hobbies("test7", rnd.nextDouble()));
     hobbies.add(Hobbies("test8", rnd.nextDouble()));
     while (hobbieCounter < humans.length) {
-      //humans[0].setHobbie(hobbies);
       humans[hobbieCounter].setHobbie([hobbies[rnd.nextInt(hobbies.length)]]);
 
       hobbieCounter++;
@@ -181,9 +181,26 @@ class Utils {
     // todo: yaşlılar covid'den daha çok etkileniyor. (kronik rahatsızlıkları olanlar göz ardı edildi.)
     covid.add(Covid(0.8));
     covid[0].makeHumanCovid(humans[0]);
-    print("\n");
+    print(
+        "\n"); /** buraları 0. insanı ve 0. aileyi covid yapacak mı diye yazıldı. */
     print(humans[0].isCovid.toString());
     covid[0].makeFamilyCovid(0);
     print(families[0].toString());
+    print("\n");
+    print("\n");
+    int i = 0;
+    while (i < hobbies.length) {
+      print("There are a total of " +
+          hobbies[i]
+              .hobbieAmountHuman(hobbies[i])
+              .toString() + //* hangi hobiden kaç kişi var dağılımı görmek için yazıldı.
+          " people who have -> " +
+          hobbies[i].name +
+          "  hobby. ");
+      i++;
+    }
+
+    print("\n");
+    print("\n");
   }
 }
