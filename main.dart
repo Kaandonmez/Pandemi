@@ -1,5 +1,6 @@
 import 'utils.dart';
 import 'dart:io';
+import 'config.dart';
 
 void main() {
   gameStarter();

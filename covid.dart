@@ -3,6 +3,7 @@ import 'human.dart';
 import 'families.dart';
 import 'utils.dart';
 import 'dart:math';
+import 'config.dart';
 
 var rand = new Random();
 

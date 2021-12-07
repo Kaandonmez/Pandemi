@@ -4,21 +4,7 @@ import 'human.dart';
 import 'families.dart';
 import 'hobbies.dart';
 import 'options.dart';
-
-var utils = new Utils();
-var options = new Options();
-var humans = [];
-var families = [];
-var populationPyramide = [];
-var rnd = new Random();
-int familyCounter = 0;
-int chance = 0;
-int yetiskinMin = 13900;
-int yetiskinMax = 24699;
-int cocukMin = 24700;
-int cocukMax = 99999;
-int yasliMin = 0;
-int yasliMax = 13899;
+import 'config.dart';
 
 class Utils {
   var newZealandPopulationPyramide = [19.431, 64.201, 16.368];
@@ -186,9 +172,9 @@ class Utils {
   }
 
   void covidSpread() {
-    var covid = [];
     // todo: min 1 kişi kesin hasta olacak human sınıfına boolean isCovid eklenebilir.
     //!done
+
     // todo: virüs 2 yolla yayılacak, family içinde, ortak hobiye sahip kişilerde.
     // todo: herhangi bir aile bireyinin sahip olduğu X hobisi diğer aile üyeleri tarafından bensenmese de olur. (mu?)
     // todo: yaş ilerledikçe bulaştırıcılığı az hobiler tanımlanabilir.
