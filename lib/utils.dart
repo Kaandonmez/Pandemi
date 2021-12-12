@@ -1,8 +1,8 @@
 import 'config.dart';
-import 'covid.dart';
-import 'families.dart';
-import 'hobbies.dart';
-import 'human.dart';
+import 'domain/model/covid.dart';
+import 'domain/model/families.dart';
+import 'domain/model/hobbies.dart';
+import 'domain/model/human.dart';
 
 class Utils {
   var newZealandPopulationPyramide = [19.431, 64.201, 16.368];
