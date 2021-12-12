@@ -86,7 +86,6 @@ class Utils {
         humans.add(new Human("Young" + counter.toString(), counter.toString(),
             getRandomAge(0, 24)));
       }
-
       counter++;
     }
     /*for (int i = 0; i < 100000; i++) {
