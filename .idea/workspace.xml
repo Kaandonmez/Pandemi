@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="617df1c3-7a65-4cfc-b8be-019ff811c209" name="Changes" comment="merge conflicts" />
+    <list default="true" id="617df1c3-7a65-4cfc-b8be-019ff811c209" name="Changes" comment="anlamadığım github şeyleri">
+      <change afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/options.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +34,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../tools/dart-sdk" />
-    <property name="settings.editor.selected.configurable" value="dart.settings" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -42,7 +48,24 @@
       <workItem from="1639306757802" duration="669000" />
       <workItem from="1639307985919" duration="212000" />
       <workItem from="1639308265242" duration="607000" />
+      <workItem from="1639308913789" duration="716000" />
+      <workItem from="1639314703261" duration="464000" />
     </task>
+    <task id="LOCAL-00001" summary="anlamadığım github şeyleri">
+      <created>1639309128259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639309128259</updated>
+    </task>
+    <task id="LOCAL-00002" summary="anlamadığım github şeyleri">
+      <created>1639314721685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639314721685</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -58,10 +81,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge conflicts" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge conflicts" />
+    <MESSAGE value="anlamadığım github şeyleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="anlamadığım github şeyleri" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
