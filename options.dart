@@ -7,8 +7,7 @@ class Options {
       difficulty = Difficulty;
       print("Selected difficulty is: " + difficulty);
     } else {
-      print(
-          "You must select a value which is in difficulty options. Active difficulty is easy.");
+      print("You must select a value which is in difficulty options. Active difficulty is easy.");
     }
   }
 }

@@ -153,6 +153,7 @@ class Utils {
       print("\n");
     }
   }
+
   void createHobbies() {
     int hobbieCounter = 0;
     hobbies.add(Hobbies("test", rnd.nextDouble()));
@@ -180,8 +181,8 @@ class Utils {
     // todo: yaşlılar covid'den daha çok etkileniyor. (kronik rahatsızlıkları olanlar göz ardı edildi.)
     covid.add(Covid(0.8));
     covid[0].makeHumanCovid(humans[0]);
-    print(
-        "\n"); /** buraları 0. insanı ve 0. aileyi covid yapacak mı diye yazıldı. */
+    print("\n");
+    /** buraları 0. insanı ve 0. aileyi covid yapacak mı diye yazıldı. */
     print(humans[0].isCovid.toString());
     covid[0].makeFamilyCovid(0);
     print(families[0].toString());
