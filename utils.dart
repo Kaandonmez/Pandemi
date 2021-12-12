@@ -153,7 +153,6 @@ class Utils {
       print("\n");
     }
   }
-
   void createHobbies() {
     int hobbieCounter = 0;
     hobbies.add(Hobbies("test", rnd.nextDouble()));
