@@ -1,4 +1,4 @@
-import '../../config.dart';
+import '../../utils/config.dart';
 
 class Hobbies {
   String name = "";
