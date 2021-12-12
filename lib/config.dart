@@ -1,10 +1,10 @@
 import 'dart:math';
 
-import 'options.dart';
 import 'utils.dart';
 
+String difficulty = "easy";
+List difficultyOptions = ["easy", "medium", "hard"];
 var utils = Utils();
-var options = Options();
 var humans = [];
 var families = [];
 var hobbies = [];
@@ -19,3 +19,13 @@ int cocukMin = 24700;
 int cocukMax = 99999;
 int yasliMin = 0;
 int yasliMax = 13899;
+
+void setDifficulty(String Difficulty) {
+  if (difficultyOptions.contains(Difficulty)) {
+    difficulty = Difficulty;
+    print("Selected difficulty is: " + difficulty);
+  } else {
+    print(
+        "You must select a value which is in difficulty options. Active difficulty is easy.");
+  }
+}
