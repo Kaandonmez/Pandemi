@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="617df1c3-7a65-4cfc-b8be-019ff811c209" name="Changes" comment="format ve hala anlamadığım şeyler">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/covid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/covid.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/families.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/families.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hobbies.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/hobbies.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/human.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/human.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/utils.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="04f199ab-270a-469b-b0bd-747bf68d485b" />
+        <option name="url" value="https://github.com/Kaandonmez/Pandemi.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectId" id="22BMt9ndzhh6BiXUsU9dKPffJIf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../tools/dart-sdk" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\casper\Documents\GitHub\Pandemi\Objects" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="617df1c3-7a65-4cfc-b8be-019ff811c209" name="Changes" comment="" />
+      <created>1639306752583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639306752583</updated>
+      <workItem from="1639306757802" duration="669000" />
+      <workItem from="1639307985919" duration="212000" />
+      <workItem from="1639308265242" duration="607000" />
+      <workItem from="1639308913789" duration="716000" />
+      <workItem from="1639314703261" duration="5136000" />
+    </task>
+    <task id="LOCAL-00001" summary="anlamadığım github şeyleri">
+      <created>1639309128259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639309128259</updated>
+    </task>
+    <task id="LOCAL-00002" summary="anlamadığım github şeyleri">
+      <created>1639314721685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639314721685</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gereksiz null kontrolü kaldırıldı">
+      <created>1639315204486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639315204486</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pubspec.yaml oluşturuldu">
+      <created>1639315217113</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639315217113</updated>
+    </task>
+    <task id="LOCAL-00005" summary="kendi ayarladı bir şeyler :D">
+      <created>1639315231244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639315231244</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dart format">
+      <created>1639315340196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639315340196</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dart format">
+      <created>1639316393565</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639316393565</updated>
+    </task>
+    <task id="LOCAL-00008" summary="code optimization">
+      <created>1639316422591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639316422591</updated>
+    </task>
+    <task id="LOCAL-00009" summary="önceden eklenme kontrolü eklendi">
+      <created>1639317790078</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639317790078</updated>
+    </task>
+    <task id="LOCAL-00010" summary="format ve hala anlamadığım şeyler">
+      <created>1639317815376</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1639317815376</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge conflicts" />
+    <MESSAGE value="anlamadığım github şeyleri" />
+    <MESSAGE value="gereksiz null kontrolü kaldırıldı" />
+    <MESSAGE value="pubspec.yaml oluşturuldu" />
+    <MESSAGE value="kendi ayarladı bir şeyler :D" />
+    <MESSAGE value="dart format" />
+    <MESSAGE value="code optimization" />
+    <MESSAGE value="önceden eklenme kontrolü eklendi" />
+    <MESSAGE value="format ve hala anlamadığım şeyler" />
+    <option name="LAST_COMMIT_MESSAGE" value="format ve hala anlamadığım şeyler" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

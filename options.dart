@@ -3,7 +3,7 @@ class Options {
   List difficultyOptions = ["easy", "medium", "hard"];
 
   void setDifficulty(String Difficulty) {
-    if (Difficulty != null && difficultyOptions.contains(Difficulty)) {
+    if (difficultyOptions.contains(Difficulty)) {
       difficulty = Difficulty;
       print("Selected difficulty is: " + difficulty);
     } else {

@@ -32,7 +32,9 @@ class Human {
     familyId = FamilyId;
   }
 
-  void setHobbie(List Hobbie) {
-    hobbies.add(Hobbie);
+  void setHobbie(List Hobbies) {
+    Hobbies.forEach((hobby) => hobbies.contains(hobby)
+        ? print("already added" + hobby.toString())
+        : hobbies.add(hobby));
   }
 }
