@@ -39,6 +39,10 @@ class Utils {
     return indiaPopulationPyramide;
   }
 
+  int getRandomAge(int min, int max) {
+    return min + rnd.nextInt(max - min);
+  }
+
   void createHumans(String selectedDifficulty) {
     switch (selectedDifficulty) {
       case "easy":
@@ -67,35 +71,24 @@ class Utils {
         * !80+ -> %1,4
         */
       if (counter < populationPyramide[4] * 1000) {
-        int min = 80;
-        int max = 100;
         humans.add(new Human("Old" + counter.toString(), counter.toString(),
-            min + rnd.nextInt(max - min)));
+            getRandomAge(80, 100)));
       } else if (counter < populationPyramide[3] * 1000) {
-        int min = 60;
-        int max = 79;
         humans.add(new Human("Middle-old" + counter.toString(),
-            counter.toString(), min + rnd.nextInt(max - min)));
+            counter.toString(), getRandomAge(60, 79)));
       } else if (counter < populationPyramide[2] * 1000) {
-        int min = 40;
-        int max = 59;
         humans.add(new Human("Middle" + counter.toString(), counter.toString(),
-            min + rnd.nextInt(max - min)));
+            getRandomAge(40, 59)));
       } else if (counter < populationPyramide[1] * 1000) {
-        int min = 25;
-        int max = 39;
         humans.add(new Human("Middle-young" + counter.toString(),
-            counter.toString(), min + rnd.nextInt(max - min)));
+            counter.toString(), getRandomAge(25, 39)));
       } else {
-        int min = 0;
-        int max = 24;
         humans.add(new Human("Young" + counter.toString(), counter.toString(),
-            min + rnd.nextInt(max - min)));
+            getRandomAge(0, 24)));
       }
 
       counter++;
     }
-
     /*for (int i = 0; i < 100000; i++) {
       print(humans[i].toString());
     }
