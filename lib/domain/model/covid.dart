@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'config.dart';
+import '../../config.dart';
 import 'human.dart';
 
 var rand = Random(); //! daha sonra lazım olabilir diye burada.
