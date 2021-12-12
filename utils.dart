@@ -1,8 +1,8 @@
 import 'dart:math';
-import 'covid.dart';
-import 'human.dart';
-import 'families.dart';
-import 'hobbies.dart';
+import 'Objects/covid.dart';
+import 'Objects/human.dart';
+import 'Objects/families.dart';
+import 'Objects/hobbies.dart';
 import 'options.dart';
 import 'config.dart';
 
@@ -140,10 +140,7 @@ class Utils {
       familyCounter++;
     }
 
-    for (int i = 0; i < 5; i++) {
-      print(families[i].toString());
-      print("\n");
-    }
+    families.forEach((family) => print(family));
   }
 
   void createHobbies() {

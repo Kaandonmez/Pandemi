@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="617df1c3-7a65-4cfc-b8be-019ff811c209" name="Changes" comment="code optimization">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+    <list default="true" id="617df1c3-7a65-4cfc-b8be-019ff811c209" name="Changes" comment="format ve hala anlamadığım şeyler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/human.dart" beforeDir="false" afterPath="$PROJECT_DIR$/human.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/covid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/covid.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/families.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/families.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hobbies.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/hobbies.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/human.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/human.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/utils.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\casper\Documents\GitHub\Pandemi\Objects" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,7 +56,7 @@
       <workItem from="1639307985919" duration="212000" />
       <workItem from="1639308265242" duration="607000" />
       <workItem from="1639308913789" duration="716000" />
-      <workItem from="1639314703261" duration="3009000" />
+      <workItem from="1639314703261" duration="5136000" />
     </task>
     <task id="LOCAL-00001" summary="anlamadığım github şeyleri">
       <created>1639309128259</created>
@@ -108,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639316422591</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="önceden eklenme kontrolü eklendi">
+      <created>1639317790078</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639317790078</updated>
+    </task>
+    <task id="LOCAL-00010" summary="format ve hala anlamadığım şeyler">
+      <created>1639317815376</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1639317815376</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,18 +154,9 @@
     <MESSAGE value="kendi ayarladı bir şeyler :D" />
     <MESSAGE value="dart format" />
     <MESSAGE value="code optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="code optimization" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/human.dart</url>
-          <line>36</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="önceden eklenme kontrolü eklendi" />
+    <MESSAGE value="format ve hala anlamadığım şeyler" />
+    <option name="LAST_COMMIT_MESSAGE" value="format ve hala anlamadığım şeyler" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -33,7 +33,8 @@ class Human {
   }
 
   void setHobbie(List Hobbies) {
-    Hobbies.forEach((hobby) =>
-        hobbies.contains(hobby) ? print("already added" + hobby.toString()) : hobbies.add(hobby));
+    Hobbies.forEach((hobby) => hobbies.contains(hobby)
+        ? print("already added" + hobby.toString())
+        : hobbies.add(hobby));
   }
 }
