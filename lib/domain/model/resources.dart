@@ -8,17 +8,22 @@ class Resources {
    * todo: (ancak önce isimleri ve kaç tane değişken olacağı kesinletirilmeli)
    */ ///
 
-  double? X;
+  double X = 0;
 
-  double? Y;
+  double Y = 0;
 
-  double? Z;
+  double Z = 0;
 
-  double? T;
+  double T = 0;
 
-  double? M;
+  double M = 0;
 
-  double? N;
+  double N = 0;
 
-  double? P;
+  double P = 0;
+
+  Resources(
+      /*double x, double y, double z, double t, double m, double n, double p*/) {
+    //X = Y = Z = T = M = N = P = 0;
+  }
 }

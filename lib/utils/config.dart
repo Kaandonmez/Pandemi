@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:pandemic/domain/model/resources.dart';
+
 import 'utils.dart';
 
 String difficulty = "easy";
@@ -20,6 +22,7 @@ int cocukMin = 24700;
 int cocukMax = 99999;
 int yasliMin = 0;
 int yasliMax = 13899;
+Resources resources = Resources();
 
 void setDifficulty(String Difficulty) {
   if (difficultyOptions.contains(Difficulty)) {

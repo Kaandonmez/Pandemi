@@ -1,6 +1,6 @@
 //import 'dart:async';
 
-//import '../../utils/config.dart';
+import '../../utils/config.dart';
 
 /**
  * ! her sorunun
@@ -28,5 +28,21 @@ class Questions {
 
     ifYes = yesno[0];
     ifNo = yesno[1];
+  }
+
+  swipeYes() {
+    // ! ilgili kart yes kararına swipe edildikten sonra bu metot çağırılacak.
+    resources.X += ifYes[0];
+    resources.Y += ifYes[1];
+    resources.Z += ifYes[2];
+    resources.T += ifYes[3];
+  }
+
+  swipeNo() {
+    // ! ilgili kart no kararına swipe edildikten sonra bu metot çağırılacak.
+    resources.X += ifNo[0];
+    resources.Y += ifNo[1];
+    resources.Z += ifNo[2];
+    resources.T += ifNo[3];
   }
 }
