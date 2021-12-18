@@ -1,4 +1,6 @@
-import '../../utils/config.dart';
+//import 'dart:async';
+
+//import '../../utils/config.dart';
 
 /**
  * ! her sorunun
@@ -19,4 +21,12 @@ class Questions {
   var ifNo =
       []; //! mesela 4 tane değişken değerimi olsun (sağlık psikolji gibi) ifNo[-0.25,100,0.18,98,7]
 
+  Questions(var qString, int id, List yesno) {
+    questionString = qString;
+
+    questionId = id;
+
+    ifYes = yesno[0];
+    ifNo = yesno[1];
+  }
 }
