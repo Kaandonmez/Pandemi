@@ -11,6 +11,7 @@ var hobbies = [];
 var populationPyramide = [];
 var rnd = Random();
 var covid = [];
+var questions = [];
 int familyCounter = 0;
 int chance = 0;
 int yetiskinMin = 13900;
