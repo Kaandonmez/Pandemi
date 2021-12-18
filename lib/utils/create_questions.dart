@@ -29,6 +29,4 @@ void createQuestions() {
     [0.25, -100, -0.18, -98, 7], //!evet ise
     [-0.25, 100, 0.18, 98, 7] // !hayır ise
   ]));
-
-  questions.add(Questions(qString, id, yesno));
 }
