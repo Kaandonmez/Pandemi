@@ -6,6 +6,7 @@ class Resources {
    * todo: bu değerlerin isimlerinin belirtilmesiyle beraber artıp azalma fonksiyonları yazılacak.
    * todo: ayrıca aynı anda birkaç değeri de arttrıp azaltma metotları eklenebilir. 
    * todo: (ancak önce isimleri ve kaç tane değişken olacağı kesinletirilmeli)
+   * ? time classı açmasak, her yes veya no swipe edildiğinde x gün arttırsak olur mu?
    */ ///
 
   double X = 0;
