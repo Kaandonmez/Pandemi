@@ -1,4 +1,4 @@
-import 'package:pandemic/utils/config.dart';
+//import 'package:pandemic/utils/config.dart';
 
 import '../domain/model/questions.dart';
 import 'config.dart';
