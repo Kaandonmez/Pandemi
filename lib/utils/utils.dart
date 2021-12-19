@@ -142,7 +142,6 @@ class Utils {
   }
 
   void createHobbies() {
-    int hobbieCounter = 0;
     hobbies.add(Hobbies("test", rnd.nextDouble()));
     hobbies.add(Hobbies("test2", rnd.nextDouble()));
     hobbies.add(Hobbies("test3", rnd.nextDouble()));
@@ -151,9 +150,13 @@ class Utils {
     hobbies.add(Hobbies("test6", rnd.nextDouble()));
     hobbies.add(Hobbies("test7", rnd.nextDouble()));
     hobbies.add(Hobbies("test8", rnd.nextDouble()));
-    while (hobbieCounter < humans.length) {
-      humans[hobbieCounter].setHobbie([hobbies[rnd.nextInt(hobbies.length)]]);
 
+    int hobbieCounter = 0;
+    while (hobbieCounter < humans.length) {
+      int randomHobbyId = rnd.nextInt(hobbies.length);
+      Hobbies randomHobbie = hobbies[randomHobbyId];
+      humans[hobbieCounter].setHobbie([randomHobbie]);
+      randomHobbie.incrementMemberCount();
       hobbieCounter++;
     }
   }
@@ -179,7 +182,7 @@ class Utils {
     while (i < hobbies.length) {
       print("There are a total of " +
           hobbies[i]
-              .hobbieAmountHuman(hobbies[i])
+              .memberCount
               .toString() + //* hangi hobiden kaç kişi var dağılımı görmek için yazıldı.
           " people who have -> " +
           hobbies[i].name +
