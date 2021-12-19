@@ -3,6 +3,7 @@ import '../domain/model/covid.dart';
 import '../domain/model/families.dart';
 import '../domain/model/hobbies.dart';
 import '../domain/model/human.dart';
+import 'create_questions.dart';
 
 class Utils {
   var newZealandPopulationPyramide = [19.431, 64.201, 16.368];
@@ -12,11 +13,11 @@ class Utils {
   var turkeyPopulationPyramide = [42.2, 24.7, 17.8, 13.9, 1.4];
   //*genç nüfustan yaşlı nüfusa doğru sıralanmış (sadece türkiye için)
 
-/// !0-24 -> %42,2
-/// !25-39 -> %24,7
-/// !40-59 -> %17,8
-/// !60-79 -> %13,9
-/// !80+ -> %1,4
+  /// !0-24 -> %42,2
+  /// !25-39 -> %24,7
+  /// !40-59 -> %17,8
+  /// !60-79 -> %13,9
+  /// !80+ -> %1,4
 
   var indiaPopulationPyramide = [26.161, 67.265, 6.578];
 
@@ -70,8 +71,8 @@ class Utils {
         humans.add(Human("Old" + counter.toString(), counter.toString(),
             getRandomAge(80, 100)));
       } else if (counter < populationPyramide[3] * 1000) {
-        humans.add(Human("Middle-old" + counter.toString(),
-            counter.toString(), getRandomAge(60, 79)));
+        humans.add(Human("Middle-old" + counter.toString(), counter.toString(),
+            getRandomAge(60, 79)));
       } else if (counter < populationPyramide[2] * 1000) {
         humans.add(Human("Middle" + counter.toString(), counter.toString(),
             getRandomAge(40, 59)));
@@ -192,5 +193,11 @@ class Utils {
 
     print("\n");
     print("\n");
+  }
+
+  void createQuestions() {
+    createQuestions();
+    print(questions[0].ifYes);
+    print(questions[0].ifYes[0]);
   }
 }
