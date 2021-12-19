@@ -19,7 +19,7 @@ questions.add(Questions("Soru Stringi Buraya!!", Soruidsi buraya int olarak giri
 
  */ ///
 
-void createQuestions() {
+void create_Questions() {
   questions.add(Questions("Bu çok satırlı bir sorudur?", 0, [
     [0.25, -100, -0.18, -98, 7], //!evet ise
     [-0.25, 100, 0.18, 98, 7] //  !hayır ise
