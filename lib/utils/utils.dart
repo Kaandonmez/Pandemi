@@ -208,12 +208,12 @@ class Utils {
 
   void createActivities() {
     activities.add(Activities("school", 1)); // 0 remote 1 face 2 no
-    activities.add(Activities("work", 1));
-    activities.add(Activities("travel", 1));
-    activities.add(Activities("sports", 1));
-    activities.add(Activities("cinema", 1));
-    activities.add(Activities("shopping", 1));
-    activities.add(Activities("food", 1));
+    activities.add(Activities("work", 1)); //1
+    activities.add(Activities("travel", 1)); //2
+    activities.add(Activities("sports", 1)); //3
+    activities.add(Activities("cinema", 1)); //4
+    activities.add(Activities("shopping", 1)); //5
+    activities.add(Activities("food", 1)); //6
 
     int hobbieCounter = 0;
     while (hobbieCounter < humans.length) {

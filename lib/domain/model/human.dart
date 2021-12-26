@@ -38,14 +38,77 @@ class Human {
     surname = Surname;
     age = Age;
     isCovid = false;
+
     if (age < 5) {
       health = 95 + rnd.nextInt(6);
       satisfaction = null;
-      sensitivity = (7 + rnd.nextInt(4)) / 10;
-      setActivities([activities[0]]);
-    } else if (age >= 5 && age < 14) {
+      sensitivity = (70 + rnd.nextInt(31)) / 100;
+    } else if (age < 14) {
       health = 95 + rnd.nextInt(6);
       satisfaction = null;
+      sensitivity = (50 + rnd.nextInt(51)) / 100;
+      setActivities([
+        activities[0],
+        activities[2],
+        activities[3],
+        activities[4],
+        activities[5],
+        activities[6]
+      ]);
+    } else if (age <= 24) {
+      health = 90 + rnd.nextInt(11);
+      satisfaction = 40 + rnd.nextInt(41);
+      sensitivity = (20 + rnd.nextInt(61)) / 100;
+      setActivities([
+        activities[0],
+        activities[1],
+        activities[2],
+        activities[3],
+        activities[4],
+        activities[5],
+        activities[6]
+      ]);
+    } else if (age <= 40) {
+      health = 85 + rnd.nextInt(16);
+      satisfaction = 50 + rnd.nextInt(31);
+      sensitivity = (15 + rnd.nextInt(56)) / 100;
+      setActivities([
+        activities[1],
+        activities[2],
+        activities[3],
+        activities[4],
+        activities[5],
+        activities[6]
+      ]);
+    } else if (age <= 59) {
+      health = 75 + rnd.nextInt(16);
+      satisfaction = 60 + rnd.nextInt(21);
+      sensitivity = (10 + rnd.nextInt(66)) / 100;
+      setActivities([
+        activities[1],
+        activities[2],
+        activities[3],
+        activities[4],
+        activities[5],
+        activities[6]
+      ]);
+    } else if (age < 80) {
+      health = 65 + rnd.nextInt(16);
+      satisfaction = 70 + rnd.nextInt(21);
+      sensitivity = (45 + rnd.nextInt(51)) / 100;
+      setActivities([
+        activities[1],
+        activities[2],
+        activities[3],
+        activities[4],
+        activities[5],
+        activities[6]
+      ]);
+    } else if (age >= 80) {
+      health = 55 + rnd.nextInt(16);
+      satisfaction = 65 + rnd.nextInt(31);
+      sensitivity = (55 + rnd.nextInt(36)) / 100;
+      setActivities([activities[2]]);
     }
   }
 
