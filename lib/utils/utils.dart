@@ -107,30 +107,27 @@ class Utils {
       chance = rnd.nextInt(100);
       if (chance < 21) {
         //? 5 kişilik aile oluşturma
-        families.add(Families(familyCounter.toString(), [
+        families.add(Families(familyCounter, [
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[yasliMin + rnd.nextInt(yasliMax - yasliMin)],
-          humans[0]
+          humans[yasliMin + rnd.nextInt(yasliMax - yasliMin)]
         ]));
       } else if (chance < 56) {
         //? 3 kişilik aile oluşturma
-        families.add(Families(familyCounter.toString(), [
+        families.add(Families(familyCounter, [
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[1]
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
         ]));
       } else if (chance <= 100) {
         //? 4 kişilik aile oluşturma
-        families.add(Families(familyCounter.toString(), [
+        families.add(Families(familyCounter, [
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
           humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[2]
+          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
         ]));
       }
 
@@ -196,8 +193,9 @@ class Utils {
   }
 
   void createQuestions() {
-    createQuestions();
+    create_Questions();
     print(questions[0].ifYes);
     print(questions[0].ifYes[0]);
+    print(questions.length.toString());
   }
 }
