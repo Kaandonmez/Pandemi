@@ -201,9 +201,9 @@ class Utils {
       counter_family++;
     }
 
-    for (var family in families) {
+    /*for (var family in families) {
       print(family);
-    }
+    }*/
   }
 
   void createActivities() {

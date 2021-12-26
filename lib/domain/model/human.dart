@@ -5,7 +5,7 @@ class Human {
   String name = ""; // todo: sonradan çıkarılacak.
   String surname = "";
   num age = 0;
-  List<Activities> activities = [];
+  List<Activities> _activities = [];
   int familyId = 0;
   bool isCovid = false;
   num health = 0; // ! hastalık sınıfı etki edecek dikkat!
@@ -42,7 +42,7 @@ class Human {
       health = 95 + rnd.nextInt(6);
       satisfaction = null;
       sensitivity = (7 + rnd.nextInt(4)) / 10;
-      setActivities([activities.contains("school")]);
+      setActivities([activities[0]]);
     } else if (age >= 5 && age < 14) {
       health = 95 + rnd.nextInt(6);
       satisfaction = null;
@@ -66,12 +66,19 @@ class Human {
     familyId = FamilyId;
   }
 
-  void setActivities(List Activities) {
+  void setActivities(List<Activities> Activities) {
     for (var activity in Activities) {
-      activities.contains(activity)
-          ? print("already added" + activity.toString())
-          : activities.add(activity);
+      if (_activities.contains(activity)) {
+        print("already added" + activity.toString());
+      } else {
+        _activities.add(activity);
+        activity.incrementMemberCount();
+      }
     }
+  }
+
+  List<Activities> getActivities() {
+    return _activities;
   }
 
   void makeDead() {

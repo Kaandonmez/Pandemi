@@ -6,16 +6,16 @@ class Family {
   List<Human> members = [];
   List<Activities> activities = [];
 
-  Family(int Id, List Members) {
+  Family(int Id, List<Human> Members) {
     id = Id;
     for (int i = 0; i < Members.length; i++) {
       if (members.contains(Members[i]) == false) {
         members.add(Members[i]);
-        for (int j = 0; j < Members[i].activities.length; j++) {
-          if (activities.contains(Members[i].activities[j]) == false) {
-            activities.add(Members[i].activities[j]);
+        Members[i].getActivities().forEach((activity) {
+          if (activities.contains(activity) == false) {
+            activities.add(activity);
           }
-        }
+        });
         Members[i].setFamilyId(Id);
       }
     }
