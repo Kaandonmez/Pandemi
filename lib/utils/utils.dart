@@ -1,7 +1,7 @@
 import 'config.dart';
 import '../domain/model/covid.dart';
-import '../domain/model/families.dart';
-import '../domain/model/hobbies.dart';
+import '../domain/model/family.dart';
+import '../domain/model/activity.dart';
 import '../domain/model/human.dart';
 import 'create_questions.dart';
 
@@ -18,6 +18,12 @@ class Utils {
   /// !40-59 -> %17,8
   /// !60-79 -> %13,9
   /// !80+ -> %1,4
+  ///
+  ///
+  ///
+  /// !0-24 -> %42,2  %48 civarı
+  /// !25-59 -> %24,7 %35 civarı
+  /// !60-100 -> %13,9
 
   var indiaPopulationPyramide = [26.161, 67.265, 6.578];
 
@@ -58,31 +64,42 @@ class Utils {
         }
     }
     int counter = 0;
-    while (counter < 100000) {
+    while (counter < 200000) {
       //! toplam oluşturulacak insan sayısı buradan belirtiliyor.
       /**
-        * !0-24 -> %42,2
-        * !25-39 -> %24,7
-        * !40-59 -> %17,8
-        * !60-79 -> %13,9
-        * !80+ -> %1,4
+        * !0-24 -> %42,2   0
+        * !25-39 -> %24,7  1
+        * !40-59 -> %17,8  2
+        * !60-79 -> %13,9  3
+        * !80+ -> %1,4     4
         */
-      if (counter < populationPyramide[4] * 1000) {
+      if (counter < populationPyramide[4] * 2000) {
         humans.add(Human("Old" + counter.toString(), counter.toString(),
             getRandomAge(80, 100)));
-      } else if (counter < populationPyramide[3] * 1000) {
+      } else if (counter <
+          (populationPyramide[3] + populationPyramide[4]) * 2000) {
         humans.add(Human("Middle-old" + counter.toString(), counter.toString(),
             getRandomAge(60, 79)));
-      } else if (counter < populationPyramide[2] * 1000) {
+      } else if (counter <
+          (populationPyramide[3] +
+                  populationPyramide[4] +
+                  populationPyramide[2]) *
+              2000) {
         humans.add(Human("Middle" + counter.toString(), counter.toString(),
             getRandomAge(40, 59)));
-      } else if (counter < populationPyramide[1] * 1000) {
+      } else if (counter <
+          (populationPyramide[3] +
+                  populationPyramide[4] +
+                  populationPyramide[2] +
+                  populationPyramide[1]) *
+              2000) {
         humans.add(Human("Middle-young" + counter.toString(),
             counter.toString(), getRandomAge(25, 39)));
       } else {
         humans.add(Human("Young" + counter.toString(), counter.toString(),
             getRandomAge(0, 24)));
       }
+      //print(humans[counter]);
       counter++;
     }
     /*for (int i = 0; i < 100000; i++) {
@@ -91,47 +108,85 @@ class Utils {
     print("\n");
     print(humans.length.toString());
     */
-    createHobbies(); //!   <---- hobiler burada oluşturuluyor.
+    createActivities(); //!   <---- hobiler burada oluşturuluyor.
   }
 
   void createFamilies() {
-    while (familyCounter < 5) {
+    int counter_family = 0;
+    int counter_adult = 30600; //13900~24699
+    int counter_young = 115600; //24700~99999
+    int counter_old = 0; //0~13899
+    while (counter_family < 29000) {
       //!  <----- kaç adet aile olşturulacağı burada belirleniyor.
+
       /**
-        * todo: test amaçlı aile oluşturmak 100 tane deneme amaçlı.
-        * ! ailelerin %35'i 3 kişilik olsun. (2x yetişkin + 1 çocuk)
-        * ! ailelerin %45'i 4 kişilik olsun (2x yetişkin + 2 çocuk)
-        * ! ailelerin %20'si 5 kişilik olsun (2x yetişkin + 2 çocuk + 1 yaşlı)
-        * todo: 26 yaşındaki birinin 25 yaşındaki çocuğu olabilir daha sonra düzenlenecek
-        */
-      chance = rnd.nextInt(100);
-      if (chance < 21) {
-        //? 5 kişilik aile oluşturma
-        families.add(Families(familyCounter, [
-          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[yasliMin + rnd.nextInt(yasliMax - yasliMin)]
+         * ! 1 kişilik aile %17,9 +++ -> 
+         * ! 2 yetişkinli aile %13,6 +++ ->
+         * ! 2 yetişkin 1 çocuk %21 +++  ->
+         * ! 2 yeiştkin 2 çocuk %21 +++  ->
+         * ! 1 yetişkin 1 çocuk %9,7 +++ ->
+         * ! 2 yetişkin 1 çocuk 1 yaşlı %14 +++ ->
+         * ! 3 kişilik yetişkin ve 1 yaşlı %2,8 ->
+         */
+
+      if (counter_family < 6089) {
+        //? 2 yetişkin 1 çocuk %21
+        families.add(Family(counter_family, [
+          humans[counter_adult],
+          humans[++counter_adult],
+          humans[counter_young]
         ]));
-      } else if (chance < 56) {
-        //? 3 kişilik aile oluşturma
-        families.add(Families(familyCounter, [
-          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
+        counter_adult++;
+        counter_young++;
+      } else if (counter_family < 12179) {
+        //? 2 yeiştkin 2 çocuk %21
+        families.add(Family(counter_family, [
+          humans[counter_adult],
+          humans[++counter_adult],
+          humans[counter_young],
+          humans[++counter_young]
         ]));
-      } else if (chance <= 100) {
-        //? 4 kişilik aile oluşturma
-        families.add(Families(familyCounter, [
-          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[yetiskinMin + rnd.nextInt(yetiskinMax - yetiskinMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)],
-          humans[cocukMin + rnd.nextInt(cocukMax - cocukMin)]
+        counter_adult++;
+        counter_young++;
+      } else if (counter_family < 17370) {
+        //? 1 kişilik aile %17,9
+        families.add(Family(counter_family, [humans[counter_adult]]));
+        counter_adult++;
+      } else if (counter_family < 21430) {
+        //? 2 yetişkin 1 çocuk 1 yaşlı %14
+        families.add(Family(counter_family, [
+          humans[counter_adult],
+          humans[++counter_adult],
+          humans[counter_young],
+          humans[counter_old]
         ]));
+        counter_adult++;
+        counter_young++;
+        counter_old++;
+      } else if (counter_family < 25374) {
+        //? 2 yetişkinli aile %13,6
+        families.add(Family(
+            counter_family, [humans[counter_adult], humans[++counter_adult]]));
+        counter_adult++;
+      } else if (counter_family < 28187) {
+        //? 1 yetişkin 1 çocuk %9,7
+        families.add(Family(
+            counter_family, [humans[counter_adult], humans[counter_young]]));
+        counter_adult++;
+        counter_young++;
+      } else if (chance < 28999) {
+        //? 3 kişilik yetişkin ve 1 yaşlı %2,8
+        families.add(Family(counter_family, [
+          humans[counter_adult],
+          humans[++counter_adult],
+          humans[++counter_adult],
+          humans[counter_old]
+        ]));
+        counter_adult++;
+        counter_old++;
       }
 
-      familyCounter++;
+      counter_family++;
     }
 
     for (var family in families) {
@@ -139,20 +194,20 @@ class Utils {
     }
   }
 
-  void createHobbies() {
-    hobbies.add(Hobbies("test", rnd.nextDouble()));
-    hobbies.add(Hobbies("test2", rnd.nextDouble()));
-    hobbies.add(Hobbies("test3", rnd.nextDouble()));
-    hobbies.add(Hobbies("test4", rnd.nextDouble()));
-    hobbies.add(Hobbies("test5", rnd.nextDouble()));
-    hobbies.add(Hobbies("test6", rnd.nextDouble()));
-    hobbies.add(Hobbies("test7", rnd.nextDouble()));
-    hobbies.add(Hobbies("test8", rnd.nextDouble()));
+  void createActivities() {
+    activities.add(Activities("test", rnd.nextDouble()));
+    activities.add(Activities("test2", rnd.nextDouble()));
+    activities.add(Activities("test3", rnd.nextDouble()));
+    activities.add(Activities("test4", rnd.nextDouble()));
+    activities.add(Activities("test5", rnd.nextDouble()));
+    activities.add(Activities("test6", rnd.nextDouble()));
+    activities.add(Activities("test7", rnd.nextDouble()));
+    activities.add(Activities("test8", rnd.nextDouble()));
 
     int hobbieCounter = 0;
     while (hobbieCounter < humans.length) {
-      int randomHobbyId = rnd.nextInt(hobbies.length);
-      Hobbies randomHobbie = hobbies[randomHobbyId];
+      int randomHobbyId = rnd.nextInt(activities.length);
+      Activities randomHobbie = activities[randomHobbyId];
       humans[hobbieCounter].setHobbie([randomHobbie]);
       randomHobbie.incrementMemberCount();
       hobbieCounter++;
@@ -177,13 +232,13 @@ class Utils {
     print("\n");
     print("\n");
     int i = 0;
-    while (i < hobbies.length) {
+    while (i < activities.length) {
       print("There are a total of " +
-          hobbies[i]
+          activities[i]
               .memberCount
               .toString() + //* hangi hobiden kaç kişi var dağılımı görmek için yazıldı.
           " people who have -> " +
-          hobbies[i].name +
+          activities[i].name +
           "  hobby. ");
       i++;
     }
@@ -197,5 +252,6 @@ class Utils {
     print(questions[0].ifYes);
     print(questions[0].ifYes[0]);
     print(questions.length.toString());
+    families[5].id;
   }
 }

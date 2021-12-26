@@ -10,7 +10,6 @@ void gameStarter() {
   setDifficulty(stdin.readLineSync()!);
   utils.createHumans(difficulty); //!create hobbie bunun içinde bulunuyor.
   utils.createFamilies();
-  utils.covidSpread();
-  utils
-      .createQuestions(); //! sorular create_questions içinde belirtildikten sonra hepsi burada oluşturuluyor.
+  //utils.covidSpread();
+  //utils.createQuestions(); //! sorular create_questions içinde belirtildikten sonra hepsi burada oluşturuluyor.
 }

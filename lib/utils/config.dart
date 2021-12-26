@@ -1,5 +1,9 @@
 import 'dart:math';
 
+import 'package:pandemic/domain/model/activity.dart';
+import 'package:pandemic/domain/model/family.dart';
+import 'package:pandemic/domain/model/human.dart';
+import 'package:pandemic/domain/model/questions.dart';
 import 'package:pandemic/domain/model/resources.dart';
 
 import 'utils.dart';
@@ -7,13 +11,13 @@ import 'utils.dart';
 String difficulty = "easy";
 List difficultyOptions = ["easy", "medium", "hard"];
 var utils = Utils();
-var humans = [];
-var families = [];
-var hobbies = [];
+List<Human> humans = [];
+List<Family> families = [];
+List<Activities> activities = [];
 var populationPyramide = [];
 var rnd = Random();
 var covid = [];
-var questions = [];
+List<Questions> questions = [];
 int familyCounter = 0;
 int chance = 0;
 int yetiskinMin = 13900;

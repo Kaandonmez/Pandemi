@@ -17,13 +17,16 @@ class Covid {
   void makeHumanCovid(Human human) {
     //* tek bir insanı covid yap.
     human.isCovid = true;
+
     makeFamilyCovid(human.familyId); // todo:
   }
 
   void makeFamilyCovid(int familyid) {
-    //* tek bir aileyi covid yap.
-    families[familyid].isCovid = true;
-    makeHumansCovid(families[familyid].members);
+    int counter = 0;
+    while (counter < families[familyid].members.length) {
+      families[familyid].members[counter].isCovid = true;
+      counter++;
+    }
   }
 
   void getRidOfHumansCovid(List Members) {
