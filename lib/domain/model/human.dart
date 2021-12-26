@@ -1,11 +1,9 @@
-
-
 class Human {
-  String name = "";
+  String name = ""; // todo: sonradan çıkarılacak.
   String surname = "";
   num age = 0;
   List hobbies = [];
-  String familyId = "";
+  int familyId = 0;
   bool? isCovid;
 
   Human(String Name, String Surname, int Age) {
@@ -23,20 +21,20 @@ class Human {
         " and he is " +
         age.toString() +
         " years old. Family Id: " +
-        familyId +
+        familyId.toString() +
         " He is Covid -> " +
         isCovid.toString();
   }
 
-  void setFamilyId(String FamilyId) {
+  void setFamilyId(int FamilyId) {
     familyId = FamilyId;
   }
 
   void setHobbie(List Hobbies) {
     for (var hobby in Hobbies) {
       hobbies.contains(hobby)
-        ? print("already added" + hobby.toString())
-        : hobbies.add(hobby);
+          ? print("already added" + hobby.toString())
+          : hobbies.add(hobby);
     }
   }
 }

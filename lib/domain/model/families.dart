@@ -1,10 +1,9 @@
 class Families {
-  var id = "";
+  int id = 0;
   var members = [];
   var hobbies = [];
-  bool? isCovid;
 
-  Families(String Id, List Members) {
+  Families(int Id, List Members) {
     id = Id;
     for (int i = 0; i < Members.length; i++) {
       if (members.contains(Members[i]) == false) {
@@ -21,7 +20,7 @@ class Families {
 
   @override
   String toString() {
-    return id +
+    return id.toString() +
         " is a " +
         members.length.toString() +
         " person family. Members are " +

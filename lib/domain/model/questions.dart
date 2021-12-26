@@ -30,6 +30,14 @@ class Questions {
     ifNo = yesno[1];
   }
 
+  swipeBool(bool YesNo) {
+    if (YesNo) {
+      swipeYes();
+    } else {
+      swipeNo();
+    }
+  }
+
   swipeYes() {
     // ! ilgili kart yes kararına swipe edildikten sonra bu metot çağırılacak.
     resources.X += ifYes[0];
