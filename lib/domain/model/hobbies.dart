@@ -1,5 +1,3 @@
-import '../../utils/config.dart';
-
 class Hobbies {
   String name = "";
   double socialDistance = 0.0;
@@ -12,19 +10,8 @@ class Hobbies {
     //! hobiler humanlar oluşturulurken ekleniyor ancak hobiler 1 kere create ediliyor memberCount şuan gereksiz.
   }
 
-  int hobbieAmountHuman(Hobbies hobbies) {
-    //? parametre olarak aldığı hobiye kaç kişinin sahip olduğu bulunur ve o değer döndürülür.
-    int counter = 0;
-    int hobbieCounter = 0;
-    while (counter < humans.length) {
-      if (humans[counter].hobbies[0].toString() == "[" + hobbies.name + "]") {
-        hobbieCounter++;
-      }
-
-      counter++;
-    }
-
-    return hobbieCounter;
+  void incrementMemberCount() {
+    memberCount +=1;
   }
 
   @override
