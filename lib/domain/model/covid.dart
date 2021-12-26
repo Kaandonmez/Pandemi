@@ -22,8 +22,11 @@ class Covid {
   }
 
   void makeFamilyCovid(int familyid) {
-    //* tek bir aileyi covid yap.
-    families[familyid].isCovid = true;
+    int counter = 0;
+    while (counter < families[familyid].members.length) {
+      families[familyid].members[counter].isCovid = true;
+      counter++;
+    }
   }
 
   void getRidOfHumansCovid(List Members) {

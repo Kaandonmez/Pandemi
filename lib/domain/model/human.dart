@@ -1,8 +1,10 @@
+import 'package:pandemic/domain/model/activity.dart';
+
 class Human {
   String name = ""; // todo: sonradan çıkarılacak.
   String surname = "";
   num age = 0;
-  List hobbies = [];
+  List<Activities> activities = [];
   int familyId = 0;
   bool isCovid = false;
   num health = 0; // ! hastalık sınıfı etki edecek dikkat!
@@ -54,11 +56,11 @@ class Human {
     familyId = FamilyId;
   }
 
-  void setHobbie(List Hobbies) {
-    for (var hobby in Hobbies) {
-      hobbies.contains(hobby)
-          ? print("already added" + hobby.toString())
-          : hobbies.add(hobby);
+  void setHobbie(List Activities) {
+    for (var activity in Activities) {
+      activities.contains(activity)
+          ? print("already added" + activity.toString())
+          : activities.add(activity);
     }
   }
 

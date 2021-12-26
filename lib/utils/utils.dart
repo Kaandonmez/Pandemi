@@ -1,7 +1,7 @@
 import 'config.dart';
 import '../domain/model/covid.dart';
-import '../domain/model/families.dart';
-import '../domain/model/hobbies.dart';
+import '../domain/model/family.dart';
+import '../domain/model/activity.dart';
 import '../domain/model/human.dart';
 import 'create_questions.dart';
 
@@ -108,7 +108,7 @@ class Utils {
     print("\n");
     print(humans.length.toString());
     */
-    createHobbies(); //!   <---- hobiler burada oluşturuluyor.
+    createActivities(); //!   <---- hobiler burada oluşturuluyor.
   }
 
   void createFamilies() {
@@ -131,7 +131,7 @@ class Utils {
 
       if (counter_family < 6089) {
         //? 2 yetişkin 1 çocuk %21
-        families.add(Families(counter_family, [
+        families.add(Family(counter_family, [
           humans[counter_adult],
           humans[++counter_adult],
           humans[counter_young]
@@ -140,7 +140,7 @@ class Utils {
         counter_young++;
       } else if (counter_family < 12179) {
         //? 2 yeiştkin 2 çocuk %21
-        families.add(Families(counter_family, [
+        families.add(Family(counter_family, [
           humans[counter_adult],
           humans[++counter_adult],
           humans[counter_young],
@@ -150,11 +150,11 @@ class Utils {
         counter_young++;
       } else if (counter_family < 17370) {
         //? 1 kişilik aile %17,9
-        families.add(Families(counter_family, [humans[counter_adult]]));
+        families.add(Family(counter_family, [humans[counter_adult]]));
         counter_adult++;
       } else if (counter_family < 21430) {
         //? 2 yetişkin 1 çocuk 1 yaşlı %14
-        families.add(Families(counter_family, [
+        families.add(Family(counter_family, [
           humans[counter_adult],
           humans[++counter_adult],
           humans[counter_young],
@@ -165,18 +165,18 @@ class Utils {
         counter_old++;
       } else if (counter_family < 25374) {
         //? 2 yetişkinli aile %13,6
-        families.add(Families(
+        families.add(Family(
             counter_family, [humans[counter_adult], humans[++counter_adult]]));
         counter_adult++;
       } else if (counter_family < 28187) {
         //? 1 yetişkin 1 çocuk %9,7
-        families.add(Families(
+        families.add(Family(
             counter_family, [humans[counter_adult], humans[counter_young]]));
         counter_adult++;
         counter_young++;
       } else if (chance < 28999) {
         //? 3 kişilik yetişkin ve 1 yaşlı %2,8
-        families.add(Families(counter_family, [
+        families.add(Family(counter_family, [
           humans[counter_adult],
           humans[++counter_adult],
           humans[++counter_adult],
@@ -194,20 +194,20 @@ class Utils {
     }
   }
 
-  void createHobbies() {
-    hobbies.add(Hobbies("test", rnd.nextDouble()));
-    hobbies.add(Hobbies("test2", rnd.nextDouble()));
-    hobbies.add(Hobbies("test3", rnd.nextDouble()));
-    hobbies.add(Hobbies("test4", rnd.nextDouble()));
-    hobbies.add(Hobbies("test5", rnd.nextDouble()));
-    hobbies.add(Hobbies("test6", rnd.nextDouble()));
-    hobbies.add(Hobbies("test7", rnd.nextDouble()));
-    hobbies.add(Hobbies("test8", rnd.nextDouble()));
+  void createActivities() {
+    activities.add(Activities("test", rnd.nextDouble()));
+    activities.add(Activities("test2", rnd.nextDouble()));
+    activities.add(Activities("test3", rnd.nextDouble()));
+    activities.add(Activities("test4", rnd.nextDouble()));
+    activities.add(Activities("test5", rnd.nextDouble()));
+    activities.add(Activities("test6", rnd.nextDouble()));
+    activities.add(Activities("test7", rnd.nextDouble()));
+    activities.add(Activities("test8", rnd.nextDouble()));
 
     int hobbieCounter = 0;
     while (hobbieCounter < humans.length) {
-      int randomHobbyId = rnd.nextInt(hobbies.length);
-      Hobbies randomHobbie = hobbies[randomHobbyId];
+      int randomHobbyId = rnd.nextInt(activities.length);
+      Activities randomHobbie = activities[randomHobbyId];
       humans[hobbieCounter].setHobbie([randomHobbie]);
       randomHobbie.incrementMemberCount();
       hobbieCounter++;
@@ -232,13 +232,13 @@ class Utils {
     print("\n");
     print("\n");
     int i = 0;
-    while (i < hobbies.length) {
+    while (i < activities.length) {
       print("There are a total of " +
-          hobbies[i]
+          activities[i]
               .memberCount
               .toString() + //* hangi hobiden kaç kişi var dağılımı görmek için yazıldı.
           " people who have -> " +
-          hobbies[i].name +
+          activities[i].name +
           "  hobby. ");
       i++;
     }
