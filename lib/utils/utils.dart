@@ -47,6 +47,7 @@ class Utils {
   }
 
   void createHumans(String selectedDifficulty) {
+    createActivities();
     switch (selectedDifficulty) {
       case "easy":
         {
@@ -108,7 +109,18 @@ class Utils {
     print("\n");
     print(humans.length.toString());
     */
-    createActivities(); //!   <---- hobiler burada oluşturuluyor.
+    //!   <---- hobiler burada oluşturuluyor.
+    int i = 0;
+    while (i < activities.length) {
+      print("There are a total of " +
+          activities[i]
+              .memberCount
+              .toString() + //* hangi hobiden kaç kişi var dağılımı görmek için yazıldı.
+          " people who have -> " +
+          activities[i].name +
+          "  hobby. ");
+      i++;
+    }
   }
 
   void createFamilies() {
@@ -195,20 +207,19 @@ class Utils {
   }
 
   void createActivities() {
-    activities.add(Activities("test", rnd.nextDouble()));
-    activities.add(Activities("test2", rnd.nextDouble()));
-    activities.add(Activities("test3", rnd.nextDouble()));
-    activities.add(Activities("test4", rnd.nextDouble()));
-    activities.add(Activities("test5", rnd.nextDouble()));
-    activities.add(Activities("test6", rnd.nextDouble()));
-    activities.add(Activities("test7", rnd.nextDouble()));
-    activities.add(Activities("test8", rnd.nextDouble()));
+    activities.add(Activities("school", 1)); // 0 remote 1 face 2 no
+    activities.add(Activities("work", 1));
+    activities.add(Activities("travel", 1));
+    activities.add(Activities("sports", 1));
+    activities.add(Activities("cinema", 1));
+    activities.add(Activities("shopping", 1));
+    activities.add(Activities("food", 1));
 
     int hobbieCounter = 0;
     while (hobbieCounter < humans.length) {
       int randomHobbyId = rnd.nextInt(activities.length);
       Activities randomHobbie = activities[randomHobbyId];
-      humans[hobbieCounter].setHobbie([randomHobbie]);
+      humans[hobbieCounter].setActivities([randomHobbie]);
       randomHobbie.incrementMemberCount();
       hobbieCounter++;
     }
