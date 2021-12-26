@@ -24,7 +24,6 @@ class Covid {
   void makeFamilyCovid(int familyid) {
     //* tek bir aileyi covid yap.
     families[familyid].isCovid = true;
-    makeHumansCovid(families[familyid].members);
   }
 
   void getRidOfHumansCovid(List Members) {

@@ -4,17 +4,20 @@ class Human {
   num age = 0;
   List hobbies = [];
   int familyId = 0;
-  bool? isCovid;
+  bool isCovid = false;
   num health = 0; // ! hastalık sınıfı etki edecek dikkat!
   bool? isVaccinated; //! diğer kodda daha farklı tipteydi dikkat.
   //bool isGetOverCorona = false;
   int antibody = 0;
   num? satisfaction;
-  int memberType = 0; //? 0'sa çocuk 1 se yetişkin 2 ise yaşlı
+  //int memberType = 0; //? 0'sa çocuk 1 se yetişkin 2 ise yaşlı
   bool isAlive = true;
+  num infectionRate = 0;
+  num socialDistance = 0;
 
   // infectionRate = InfectionRate;
   // socialDistance = SocialDistance;
+
   // goToWork = GoToWork;
   // goToSchool = GoToSchool;
   // travel = Travel;
