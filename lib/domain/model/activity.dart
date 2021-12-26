@@ -1,9 +1,9 @@
 class Activities {
   String name = "";
-  double socialDistance = 0.0;
+  int socialDistance = 0;
   int memberCount = 0;
 
-  Activities(String Name, double SocialDistance) {
+  Activities(String Name, int SocialDistance) {
     name = Name;
     socialDistance = SocialDistance;
     //memberCount += 1;

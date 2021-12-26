@@ -1,4 +1,5 @@
 import 'package:pandemic/domain/model/activity.dart';
+import 'package:pandemic/utils/config.dart';
 
 class Human {
   String name = ""; // todo: sonradan çıkarılacak.
@@ -14,8 +15,8 @@ class Human {
   num? satisfaction;
   //int memberType = 0; //? 0'sa çocuk 1 se yetişkin 2 ise yaşlı
   bool isAlive = true;
-  num infectionRate = 0;
-  num socialDistance = 0;
+  double infectionRate = 0.0;
+  double sensitivity = 0.0;
 
   // infectionRate = InfectionRate;
   // socialDistance = SocialDistance;
@@ -37,6 +38,15 @@ class Human {
     surname = Surname;
     age = Age;
     isCovid = false;
+    if (age < 5) {
+      health = 95 + rnd.nextInt(6);
+      satisfaction = null;
+      sensitivity = (7 + rnd.nextInt(4)) / 10;
+      setActivities([activities.contains("school")]);
+    } else if (age >= 5 && age < 14) {
+      health = 95 + rnd.nextInt(6);
+      satisfaction = null;
+    }
   }
 
   @override
@@ -56,7 +66,7 @@ class Human {
     familyId = FamilyId;
   }
 
-  void setHobbie(List Activities) {
+  void setActivities(List Activities) {
     for (var activity in Activities) {
       activities.contains(activity)
           ? print("already added" + activity.toString())
