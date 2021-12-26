@@ -1,3 +1,5 @@
+import 'package:pandemic/utils/config.dart';
+
 class Resources {
   /** 
    * *oyundaki değişken olan değerleri ifade ediyor.
@@ -23,8 +25,29 @@ class Resources {
 
   double P = 0;
 
-  Resources(
-      /*double x, double y, double z, double t, double m, double n, double p*/) {
-    //X = Y = Z = T = M = N = P = 0;
+  num health_level = 0;
+  num satisfaction_level = 0;
+  num economy_level = 0;
+  num medical_level = 0;
+
+  Resources() {
+    if (difficulty == "easy") {
+      health_level = 100;
+      satisfaction_level = 100;
+      economy_level = 90;
+      medical_level = 25;
+    }
+    if (difficulty == "medium") {
+      health_level = 80;
+      satisfaction_level = 90;
+      economy_level = 75;
+      medical_level = 20;
+    }
+    if (difficulty == "hard") {
+      health_level = 70;
+      satisfaction_level = 75;
+      economy_level = 60;
+      medical_level = 15;
+    }
   }
 }

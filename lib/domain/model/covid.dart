@@ -17,6 +17,7 @@ class Covid {
   void makeHumanCovid(Human human) {
     //* tek bir insanı covid yap.
     human.isCovid = true;
+
     makeFamilyCovid(human.familyId); // todo:
   }
 

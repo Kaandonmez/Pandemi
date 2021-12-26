@@ -5,6 +5,27 @@ class Human {
   List hobbies = [];
   int familyId = 0;
   bool? isCovid;
+  num health = 0; // ! hastalık sınıfı etki edecek dikkat!
+  bool? isVaccinated; //! diğer kodda daha farklı tipteydi dikkat.
+  //bool isGetOverCorona = false;
+  int antibody = 0;
+  num? satisfaction;
+  int memberType = 0; //? 0'sa çocuk 1 se yetişkin 2 ise yaşlı
+  bool isAlive = true;
+
+  // infectionRate = InfectionRate;
+  // socialDistance = SocialDistance;
+  // goToWork = GoToWork;
+  // goToSchool = GoToSchool;
+  // travel = Travel;
+  // sports = Sports;
+  // cinema = Cinema;
+  // shopping = Shopping;
+  // eat_drink = EatDrink;
+
+  // memberType = MemberType;
+  // status = Status;
+  // hid = Hid;
 
   Human(String Name, String Surname, int Age) {
     name = Name;
@@ -36,5 +57,9 @@ class Human {
           ? print("already added" + hobby.toString())
           : hobbies.add(hobby);
     }
+  }
+
+  void makeDead() {
+    //todo
   }
 }

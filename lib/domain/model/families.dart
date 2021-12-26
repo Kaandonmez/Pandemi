@@ -26,6 +26,7 @@ class Families {
         " person family. Members are " +
         members.toString() +
         " and hobbies are " +
-        hobbies.toString();
+        hobbies.toString() +
+        "\n ";
   }
 }
