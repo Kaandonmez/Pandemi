@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:pandemic/domain/model/activity.dart';
+
 import '../../utils/config.dart';
 import 'human.dart';
 
@@ -17,8 +19,9 @@ class Covid {
   void makeHumanCovid(Human human) {
     //* tek bir insanı covid yap.
     human.isCovid = true;
-
-    makeFamilyCovid(human.familyId); // todo:
+    try {
+      makeFamilyCovid(human.familyId); // todo:
+    } catch (e) {}
   }
 
   void makeFamilyCovid(int familyid) {
@@ -36,6 +39,14 @@ class Covid {
       Members[counter].isCovid = false;
       counter++;
     }
+  }
+
+  void calculteRisk(Human human, Activities act) {
+    act.socialDistance;
+    human.infectionRate = 1;
+    //! antibody , sensitivity , socialDistance
+
+    1 - human.sensitivity + act.socialDistance;
   }
 
   //todo: belki daha sonra ortama hobiye ve virüs tipine göre covid yayılması aşağıdaki prototipe yazılabilir. (mi?)

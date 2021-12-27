@@ -14,6 +14,10 @@ class Activities {
     memberCount += 1;
   }
 
+  void decrementMemberCount() {
+    memberCount -= 1;
+  }
+
   @override
   String toString() {
     //return name + " " + socialDistance.toString() + "...   ";

@@ -15,23 +15,9 @@ class Human {
   num? satisfaction;
   //int memberType = 0; //? 0'sa çocuk 1 se yetişkin 2 ise yaşlı
   bool isAlive = true;
+
+  double sensitivity = 0.0; // 1 e ne kadar yakınsa o kadar dikkatli
   double infectionRate = 0.0;
-  double sensitivity = 0.0;
-
-  // infectionRate = InfectionRate;
-  // socialDistance = SocialDistance;
-
-  // goToWork = GoToWork;
-  // goToSchool = GoToSchool;
-  // travel = Travel;
-  // sports = Sports;
-  // cinema = Cinema;
-  // shopping = Shopping;
-  // eat_drink = EatDrink;
-
-  // memberType = MemberType;
-  // status = Status;
-  // hid = Hid;
 
   Human(String Name, String Surname, int Age) {
     name = Name;
@@ -140,8 +126,42 @@ class Human {
     }
   }
 
+  void setactByage(Activities act) {
+    if (age < 5) {
+    } else if (age < 14) {
+      if (act.name != "work") {
+        setActivities([act]);
+      }
+    } else if (age <= 24) {
+      setActivities([act]);
+    } else if (age <= 40) {
+      if (act.name != "school") {
+        setActivities([act]);
+      }
+    } else if (age <= 59) {
+      if (act.name != "school") {
+        setActivities([act]);
+      }
+    } else if (age < 80) {
+      if (act.name != "school") {
+        setActivities([act]);
+      }
+    } else if (age >= 80) {
+      if (act.name == "travel") {
+        setActivities([act]);
+      }
+    }
+  }
+
   List<Activities> getActivities() {
     return _activities;
+  }
+
+  void deleteActivity(Activities act) {
+    if (_activities.contains(act)) {
+      act.decrementMemberCount();
+    }
+    _activities.remove(act);
   }
 
   void makeDead() {

@@ -30,6 +30,14 @@ class Resources {
   num economy_level = 0;
   num medical_level = 0;
 
+  bool close_school = false;
+  bool start_vac = false;
+  bool close_sport = false;
+  bool close_cinema = false;
+  bool close_travel = false;
+  bool close_shop = false;
+  bool close_food = false;
+
   Resources() {
     if (difficulty == "easy") {
       health_level = 100;
