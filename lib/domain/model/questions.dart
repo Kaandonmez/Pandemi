@@ -87,7 +87,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[3]]);
+        humans[i].setactByage(activities[3]);
         i++;
       }
     }
@@ -103,7 +103,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[4]]);
+        humans[i].setactByage(activities[4]);
         i++;
       }
     }
@@ -119,7 +119,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[5]]);
+        humans[i].setactByage(activities[5]);
         i++;
       }
     }
@@ -135,7 +135,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[6]]);
+        humans[i].setactByage(activities[6]);
         i++;
       }
     }
@@ -151,7 +151,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[2]]);
+        humans[i].setactByage(activities[2]);
         i++;
       }
     }
@@ -204,7 +204,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[3]]);
+        humans[i].setactByage(activities[3]);
         i++;
       }
     }
@@ -220,7 +220,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[4]]);
+        humans[i].setactByage(activities[4]);
         i++;
       }
     }
@@ -236,7 +236,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[5]]);
+        humans[i].setactByage(activities[5]);
         i++;
       }
     }
@@ -252,7 +252,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[6]]);
+        humans[i].setactByage(activities[6]);
         i++;
       }
     }
@@ -268,7 +268,7 @@ class Questions {
     } else {
       int i = 0;
       while (i < humans.length) {
-        humans[i].setActivities([activities[2]]);
+        humans[i].setactByage(activities[2]);
         i++;
       }
     }
