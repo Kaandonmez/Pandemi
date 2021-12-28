@@ -30,6 +30,10 @@ class Questions {
     ifNo = yesno[1];
   }
 
+  String getquestionByid(int id) {
+    return questions[id].toString();
+  }
+
   swipeBool(bool YesNo) {
     if (YesNo) {
       swipeYes();
